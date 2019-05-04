@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <link rel="icon" type="image/x-icon" class="js-site-favicon" href="{{ url_for('static', filename='favicon.png') }}">
   <!-- Theme Made By www.w3schools.com - No Copyright -->
   <title>B7b El-Cima</title>
   <meta charset="utf-8">
@@ -10,12 +12,15 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="{{ url_for('static', filename='form.js') }}"></script>
+
   <style>
   body {
     font: 400 15px/1.8 Lato, sans-serif;
     color: #777;
   }
   h3, h4 {
+
     margin: 10px 0 30px 0;
     letter-spacing: 10px;
     font-size: 20px;
@@ -83,7 +88,7 @@
     background-color: #333;
     color: #f1f1f1;
   }
-  .modal-header, h4, .close {
+  .modal-header, .close {
     background-color: #333;
     color: #fff !important;
     text-align: center;
@@ -151,6 +156,60 @@
   textarea {
     resize: none;
   }
+/* loader-style */
+.spinner {
+  margin: 100px auto;
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  font-size: 10px;
+}
+
+.spinner > div {
+  background-color: #ffffff;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% {
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}
+
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -268,21 +327,46 @@
   <div class="container">
     <h3 class="text-center">UPLOAD</h3>
     <p class="text-center">Please UPLOAD your Image/Video</p>
-    <form action='http://127.0.0.1:5000/output' method="POST" enctype = "multipart/form-data">
+    <form>
      <div class="form-group">
        <label id="l1">Paste the URL to an image/Video or UPLOAD:</label>
        <br>
-       <input type="url" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Image URL" name='url'>
+       <input type="url" class="form-control" id="url_input"  placeholder="Enter Image URL">
      </div>
+      <br>
    <span class="control-fileupload">
-        <label for="file">Choose a file :</label>
-        <input type="file" id="file" style="width:1005px;" name='file'>
+        <label for="file_input">Choose a file :</label>
+        <input type="file" id="file_input" style="width:1005px;">
    </span>
    <br>
    <div class="text-center">
-        <button type="submit" class="btn">Colorize</button>
+        <button type="submit" class="btn btn-default">Colorize</button>
    </div>
     </form>
+    <br>
+    <div id="errorAlert" class="alert alert-danger" role="alert" style="display:none;text-align: center;"></div>
+    <br>
+    <div class="container-fluid">
+      <div class="row">
+        <h4 class="text-center" id="loader_label" style="display:none;color:#fff">Colorizing your photo</h4>
+        <div class="spinner" id="loader" style="display:none;">
+          <div class="rect1"></div>
+          <div class="rect2"></div>
+          <div class="rect3"></div>
+          <div class="rect4"></div>
+          <div class="rect5"></div>
+        </div>
+        <div class="col-sm-6">
+          <h5 class="text-center" id="in_label" style="display:none;"><strong>Input Image:</strong></h5>
+          <img alt="output" id="in_img" style="display:none;">
+        </div>
+        <div class="col-sm-6">
+          <h5 class="text-center" id="out_label" style="display:none;"><strong>Output Image:</strong></h5>
+          <img alt="output" id="out_img" style="display:none;">
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
 
@@ -294,37 +378,6 @@
   </a><br><br>
   <p>&copy; Team B7b El-Cima 2019 <br> @ In Faculty Of Engineering Of Ain Shams University</p>
 </footer>
-
-<script>
-$(document).ready(function(){
-  // Initialize Tooltip
-  $('[data-toggle="tooltip"]').tooltip();
-
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 900, function(){
-
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-})
-</script>
 
 </body>
 </html>

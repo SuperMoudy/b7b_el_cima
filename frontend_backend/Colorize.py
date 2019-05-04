@@ -6,9 +6,8 @@
 
 import cv2
 import numpy as np
-def colorize(input_path):
-    output_path = './output/output.jpg'
-    # Specify the paths for the model files 
+def colorize(input_path, output_path):
+    # Specify the paths for the model files
     protoFile = "./models/colorization_deploy_v2.prototxt"
     weightsFile = "./models/colorization_release_v2.caffemodel"
     #weightsFile = "./models/colorization_release_v2_norebal.caffemodel";
@@ -44,4 +43,3 @@ def colorize(input_path):
     img_lab_out = np.concatenate((img_l[:,:,np.newaxis],ab_dec_us),axis=2) # concatenate with original image L
     img_bgr_out = np.clip(cv2.cvtColor(img_lab_out, cv2.COLOR_Lab2BGR), 0, 1)
     cv2.imwrite(output_path, cv2.resize(img_bgr_out*255, (W_orig, H_orig)))
-    return output_path
