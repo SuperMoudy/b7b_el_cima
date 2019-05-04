@@ -1,4 +1,4 @@
-![CVC'19](images/cover.png)
+    ![CVC'19](images/cover.png)
 
 # b7b_el_cima
 
@@ -29,10 +29,11 @@ For more, check our [Project Proposal](B7b%20El-Cima.pdf)
 ---
 ## Specifications
 A simple [website](http://127.0.0.1:5000) containing a colorization app for video or image
-![](images/website.jpg)
-- The front-end is in [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5), [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) and [Bootstrap 4](https://getbootstrap.com/) using [Sublime Text](https://www.sublimetext.com/).
 
-- The back-end is in [Python 3](https://www.python.org/download/releases/3.0/) using [Flask](http://flask.pocoo.org/) framework using [Pycharm](https://www.jetbrains.com/pycharm/).
+![](images/website.jpg)
+- The front-end is in [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5), [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3), [Javascript](https://www.javascript.com/), [Ajax](http://api.jquery.com/jquery.ajax/) and [Bootstrap 4](https://getbootstrap.com/).
+
+- The back-end is in [Python 3](https://www.python.org/download/releases/3.0/) using [Flask](http://flask.pocoo.org/) framework.
 
 - Model Architectures are written using [Keras](https://keras.io/).
 
@@ -59,10 +60,12 @@ A simple [website](http://127.0.0.1:5000) containing a colorization app for vide
 
 ### To colorize an Image:
 - Include a url or upload an image then click Colorize:
+
     ![](images/how_to_use_image.jpg)
 
 ### To colorize a Video:
 - Upload a video then click Colorize:
+
     ![](images/how_to_use_video.jpg)
 
 ---
