@@ -9,9 +9,9 @@
 
 * [Specifications](#specifications)
 
-* [Steps](#steps)
+* [Model Architecture](#model-architecture)
 
-* [How to use?](#how-to-use?)
+* [How to use?](#how-to-use)
 
 * [Examples](#examples) 
 
@@ -46,26 +46,33 @@ A simple [website](http://127.0.0.1:5000) containing a colorization app for vide
 - Development is OS independent.
 
 ---
-## How to use?
-### Download this repo
-- From GitHub: Download ZIP
+## Model Architecture
 
+- You can find our model [here](Model_Arch.md)
+
+---
+## How to use?
+### 1) Download this repo
+- From GitHub: Clone or Download the repository or
 - From Git:
     > git clone https://github.com/SuperMoody/b7b_el_cima
 
-### To run the website
-- If you have Pycharm, run the application from run button
-- If you use command line, type:
-    > $ export FLASK_APP=<file_name>.py
+### 2) Install dependencies
+- Using command line:
+    > pip install -r dependencies.txt
 
-    > $ python -m flask run
+### 3) To run the website
+- Go to the project directory
+- Go to Web App
+- Run command line there and type:
+    > python abbas.py
 
-### To colorize an Image:
+### 4) To colorize an Image:
 - Include a url or upload an image then click Colorize:
 
     ![](images/how_to_use_image.jpg)
 
-### To colorize a Video:
+### 5) To colorize a Video:
 - Upload a video then click Colorize:
 
     ![](images/how_to_use_video.jpg)
