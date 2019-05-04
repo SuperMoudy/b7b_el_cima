@@ -59,7 +59,7 @@ A simple [website](http://127.0.0.1:5000) containing a colorization app for vide
 
 ### 2) Install dependencies
 - Using command line:
-    > pip install -r dependencies.txt
+    > pip install -r requirements.txt
 
 ### 3) To run the website
 - Go to the project directory
