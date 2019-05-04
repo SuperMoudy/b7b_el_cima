@@ -1,4 +1,6 @@
-    ![CVC'19](images/cover.png)
+<p align="center">
+<img  src = images/cover.png>
+</p>
 
 # b7b_el_cima
 
