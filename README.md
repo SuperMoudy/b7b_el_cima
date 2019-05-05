@@ -22,7 +22,7 @@
 ---
 ## Overview
 Academic project of an application that converts black and white videos or images into colored and nice ones.
-For more, check our [Project Proposal](B7b%20El-Cima.pdf)
+For more, check our [Project Proposal](B7b%20El-Cima.pdf) and [Video](https://www.youtube.com/watch?v=HuqR4sw75ko)
 
 ![before1](images/before1.jpg) | ![after1](images/after1.png)
 -|-
@@ -47,8 +47,14 @@ A simple [website](http://127.0.0.1:5000) containing a colorization app for vide
 
 ---
 ## Model Architecture
+- We learned 3 different architectures
+you can find all details [here](Model_Arch.md).
 
-- You can find our model [here](Model_Arch.md)
+- By comparing the initial results of them the one which gave the best result was U-Net so we continue training on it. 
+
+- We trained it by 66k images from old colored movies. you can find the dataset [here](https://drive.google.com/file/d/1g6wtlkZVHAMKwucdRPqke37aBcQaImWw/view).
+
+- The training took 2 days on colab to make 20 epochs with batch size 32.
 
 ---
 ## How to use?
@@ -57,22 +63,26 @@ A simple [website](http://127.0.0.1:5000) containing a colorization app for vide
 - From Git:
     > git clone https://github.com/SuperMoody/b7b_el_cima
 
-### 2) Install dependencies
+### 2) Download the model
+- Create a new folder in the repo
+- In this folder, download the model from [here](https://drive.google.com/file/d/1biUjfEqCFgmNGzGXg8yTf9vsXTsLaB39/view)
+
+### 3) Install dependencies
 - Using command line:
     > pip install -r requirements.txt
 
-### 3) To run the website
+### 4) To run the website
 - Go to the project directory
 - Go to Web App
 - Run command line there and type:
     > python abbas.py
 
-### 4) To colorize an Image:
+### 5) To colorize an Image:
 - Include a url or upload an image then click Colorize:
 
     ![](images/how_to_use_image.jpg)
 
-### 5) To colorize a Video:
+### 6) To colorize a Video:
 - Upload a video then click Colorize:
 
     ![](images/how_to_use_video.jpg)
