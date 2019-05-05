@@ -64,8 +64,8 @@ you can find all details [here](Model_Arch.md).
     > git clone https://github.com/SuperMoody/b7b_el_cima
 
 ### 2) Download the model
-- Create a new folder in the repo
-- In this folder, download the model from [here](https://drive.google.com/file/d/1biUjfEqCFgmNGzGXg8yTf9vsXTsLaB39/view)
+- Create a new folder in the repo and name it "models"
+- In this folder(models), download the model from [here](https://drive.google.com/file/d/1biUjfEqCFgmNGzGXg8yTf9vsXTsLaB39/view)
 
 ### 3) Install dependencies
 - Using command line:
