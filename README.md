@@ -61,7 +61,7 @@ you can find all details [here](Model_Arch.md).
 ### 1) Download this repo
 - From GitHub: Clone or Download the repository or
 - From Git:
-    > git clone https://github.com/SuperMoody/b7b_el_cima
+    > git clone https://github.com/SuperMoudy/b7b_el_cima
 
 ### 2) Download the model
 - Create a new folder in the repo and name it "models"
@@ -100,7 +100,7 @@ you can find all details [here](Model_Arch.md).
 - [Mohamed Hussein](https://github.com/teamleader6)
 - [Rawan Mahmoud](https://github.com/RawanMahmoud)
 - [Mado Mohamed](https://github.com/MadoMohamed)
-- [SuperMoody](https://github.com/SuperMoody)
+- [SuperMoudy](https://github.com/SuperMoudy)
 
 
 ---
