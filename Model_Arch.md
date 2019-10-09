@@ -14,7 +14,7 @@ We use tanh function for the last layer. The number of channels in the output la
 
 > You can find the model [here](https://drive.google.com/file/d/1biUjfEqCFgmNGzGXg8yTf9vsXTsLaB39/view)
 
-> You can find the notebook [here](https://github.com/SuperMoody/b7b_el_cima/tree/master/Notebooks/U-Net)
+> You can find the notebook [here](https://github.com/SuperMoudy/b7b_el_cima/tree/master/Notebooks/U-Net)
 
 
 ---
@@ -25,7 +25,7 @@ of the image and the color information is fully encoded in the remaining two cha
 
 > You can find the model [here](https://drive.google.com/file/d/1qkQcFkHXwDDdP2zDcef5CCU8UClI5dOe/view)
 
-> You can find the notebook [here](https://github.com/SuperMoody/b7b_el_cima/tree/master/Notebooks/arch3)
+> You can find the notebook [here](https://github.com/SuperMoudy/b7b_el_cima/tree/master/Notebooks/arch3)
 
 ---
 ## Architecture 3: 
@@ -43,7 +43,7 @@ of the image and the color information is fully encoded in the remaining two cha
 
 > You can find the model [here](https://drive.google.com/file/d/1-KQmv4bV-8j8kSzYZOg5vW0RS8axDCw_/view)
 
-> You can find the notebook [here](https://github.com/SuperMoody/b7b_el_cima/tree/master/Notebooks/arch2)
+> You can find the notebook [here](https://github.com/SuperMoudy/b7b_el_cima/tree/master/Notebooks/arch2)
 
 
 
