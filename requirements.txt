@@ -2,7 +2,7 @@ python==3.6.3
 tensorflow>=2.4.0
 keras==2.2.4
 opencv==4.0.0
-numpy==1.16.3
+numpy==1.22.0
 scipy==1.2.1
 flask==1.0.2
 skimage==0.15.0
